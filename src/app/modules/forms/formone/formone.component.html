@@ -1,0 +1,123 @@
+<div id="login" class="commonScss" fxLayoutAlign="center start">
+    <div fxFlex="96" fxFlex.gt-xs="96" fxFlex.gt-sm="96" fxLayout="column">
+       <h4 class="p-b-10 m-0 fs-20 text-dark">title</h4>
+       <form #form="ngForm" [formGroup]="applicationOne" fxLayout="column" class="rowgap">
+         <div fxLayout="row wrap" fxLayoutAlign="space-between start" class="rowgap">
+            <mat-form-field fxFlex="100" fxFlex.gt-sm="48" >
+                <mat-label>Name of the Applicant</mat-label>
+                <input matInput formControlName="username" required>
+                <mat-error *ngIf="form.submitted || fform['username'].errors?.['required']">Enter Name ot the applicant</mat-error>
+             </mat-form-field>  
+             
+             <mat-form-field fxFlex="100" fxFlex.gt-sm="48">
+                <mat-label>Designation</mat-label>
+                <input matInput formControlName="designation" required>
+                <mat-error *ngIf="form.submitted || fform['designation'].errors?.['required']">Enter the Designation</mat-error>
+             </mat-form-field>
+         </div>
+         <div fxLayout="row wrap" fxLayoutAlign="space-between start" class="rowgap">
+            <mat-form-field fxFlex="100" fxFlex.gt-sm="48" >
+                <mat-label>Department</mat-label>
+                <input matInput formControlName="department" required>
+                <mat-error *ngIf="form.submitted || fform['department'].errors?.['required']">Enter the Department</mat-error>
+             </mat-form-field>  
+             
+             <mat-form-field fxFlex="100" fxFlex.gt-sm="48">
+                <mat-label>Place of Work</mat-label>
+                <input matInput formControlName="plwork" required>
+                <mat-error *ngIf="form.submitted || fform['plwork'].errors?.['required']">Enter the Place of Work</mat-error>
+             </mat-form-field>
+         </div><div fxLayout="row wrap" fxLayoutAlign="space-between start" class="rowgap">
+            <mat-form-field fxFlex="100" fxFlex.gt-sm="48" >
+                <mat-label>Date of Birth</mat-label>
+                <input matInput formControlName="dobirth" required [matDatepicker]="picker" (focus)="picker.open()">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error *ngIf="form.submitted || fform['dobirth'].errors?.['required']">Select the Date of Birth</mat-error>
+             </mat-form-field>  
+             
+             <mat-form-field fxFlex="100" fxFlex.gt-sm="48">
+                <mat-label>Date of Appointment</mat-label>
+                <input matInput formControlName="doappoinment" required [matDatepicker]="picker2" (focus)="picker2.open()">
+                <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+                <mat-error *ngIf="form.submitted || fform['doappoinment'].errors?.['required']">Select the Date of Appointment</mat-error>
+             </mat-form-field>
+         </div><div fxLayout="row wrap" fxLayoutAlign="space-between start" class="rowgap">
+            <mat-form-field fxFlex="100" fxFlex.gt-sm="48" >
+                <mat-label>Date of Retirement/Super annotations</mat-label>
+                <input matInput formControlName="dorrtire" required [matDatepicker]="picker3" (focus)="picker3.open()">
+                <mat-datepicker-toggle matIconSuffix [for]="picker3"></mat-datepicker-toggle>
+                <mat-datepicker #picker3></mat-datepicker>
+                <mat-error *ngIf="form.submitted || fform['dorrtire'].errors?.['required']">Select the ate of Retirement/Super annotations</mat-error>
+             </mat-form-field>  
+             
+             <mat-form-field fxFlex="100" fxFlex.gt-sm="48">
+                <mat-label>No. of Years Service completed</mat-label>
+                <input matInput formControlName="service" required>
+                <mat-error *ngIf="form.submitted || fform['service'].errors?.['required']">Select the No. of Years Service completed</mat-error>
+             </mat-form-field>
+         </div><div fxLayout="row wrap" fxLayoutAlign="space-between start" class="rowgap">
+            <mat-form-field fxFlex="100" fxFlex.gt-sm="48" >
+                <mat-label>Monthly Income/Salary</mat-label>
+                <input matInput formControlName="income" required>
+                <mat-error *ngIf="form.submitted || fform['income'].errors?.['required']">Enter the Monthly Income/Salary</mat-error>
+             </mat-form-field>  
+             
+             <mat-form-field fxFlex="100" fxFlex.gt-sm="48">
+                <mat-label>Address of Communication</mat-label>
+                <input matInput formControlName="adddress1" required>
+                <mat-error *ngIf="form.submitted || fform['adddress1'].errors?.['required']">Enter the Communication Address</mat-error>
+             </mat-form-field>
+         </div><div fxLayout="row wrap" fxLayoutAlign="space-between start" class="rowgap">
+            <mat-form-field fxFlex="100" fxFlex.gt-sm="48" >
+                <mat-label>Permanent Address</mat-label>
+                <input matInput formControlName="adddress2" required>
+                <mat-error *ngIf="form.submitted || fform['adddress2'].errors?.['required']">Enter the Permanent Address</mat-error>
+             </mat-form-field>  
+             
+             <mat-form-field fxFlex="100" fxFlex.gt-sm="48">
+                <mat-label>Contact Number</mat-label>
+                <input matInput formControlName="number" required>
+                <mat-error *ngIf="form.submitted || fform['number'].errors?.['required']">Enter the Contact Number</mat-error>
+             </mat-form-field>
+         </div>
+         <div fxLayout="row wrap" fxLayoutAlign="space-between start" class="rowgap">
+            <mat-form-field fxFlex="100" fxFlex.gt-sm="48" >
+                <mat-label>Weather the employ working / re-tired</mat-label>
+                <input matInput formControlName="empwork" required>
+                <mat-error *ngIf="form.submitted || fform['empwork'].errors?.['required']">Enter the Weather the employ working / re-tired</mat-error>
+             </mat-form-field>  
+             
+             <mat-form-field fxFlex="100" fxFlex.gt-sm="48">
+                <mat-label>Whether loan required</mat-label>
+                <!-- <input matInput formControlName="loan" required> -->
+                <mat-select formControlName="loan" required>
+                    <mat-option value="Yes">Yes</mat-option>
+                    <mat-option value="No">No</mat-option>
+                </mat-select>
+                <mat-error *ngIf="form.submitted || fform['loan'].errors?.['required']">Select the Whether loan required</mat-error>
+             </mat-form-field>
+         </div>
+          <div fxLayout="row wrap" fxLayoutAlign="space-between start" class="rowgap">
+             <mat-form-field fxFlex="100" fxFlex.gt-sm="48">
+                <mat-label>Select the Location</mat-label>
+                <input matInput formControlName="location" required>
+                <!-- <mat-select formControlName="location" required>
+                    <mat-option value="koodapakkam">koodapakkam</mat-option>
+                    <mat-option value="Konerikuppam">Konerikuppam</mat-option>
+                </mat-select> -->
+                <mat-error *ngIf="form.submitted || fform['location'].errors?.['required']">Select the Location</mat-error>
+             </mat-form-field>
+         </div>
+          <mat-checkbox formControlName="remark" color="primary">I declare that the above said particulars are true and correct to the best of my knowledge</mat-checkbox>
+         <div class="rowgap" fxFlex="100" fxLayout="row wrap" fxLayoutAlign="end start" fxLayoutGap.gt-sm="15px">
+            <button mat-raised-button fxFlex="100" fxFlex.gt-sm="10" type="button" class="fs-16 ht-44 m-t-17" (click)="cancel()">Cancel</button>
+            
+            <button mat-raised-button fxFlex="100" fxFlex.gt-sm="10" type="submit" color="primary" class="fs-16 ht-44 m-t-17" (click)="submitForm()"><span
+                *ngIf="!loader">Submit</span><mat-spinner *ngIf="loader" color="white"
+                [diameter]="25"></mat-spinner></button>
+         </div>
+       </form>
+    </div>
+ </div>
